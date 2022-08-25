@@ -11,3 +11,4 @@ node {
   stage('Deploy'){
     sh "restart all"
   }
+}
