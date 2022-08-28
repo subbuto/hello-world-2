@@ -3,15 +3,15 @@ node {
     git branch:'main', url:'https://github.com/subbuto/hello-world-2.git'
   }
   stage('Install node modules') {
-    echo "npm install"
+    sh "npm install"
   }
   stage('test') {
-    echo "npm run test-headless"
+    sh "npm run test-headless"
   }
   stage('Build') {
-    echo "npm run build --prod"
+    sh "npm run build --prod"
   }
   stage('Copy') {
-    echo "cp -a /var/lib/jenkins/angular pipeline/dist/hello-world-2/. /var/www/hello-world-2/html"
+    sh "cp -a /var/lib/jenkins/angular pipeline/dist/hello-world-2/. /var/www/hello-world-2/html"
   }
 }
