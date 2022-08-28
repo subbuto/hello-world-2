@@ -3,7 +3,7 @@ node {
     git branch: 'main', url: 'https://github.com/subbuto/hello-world-2.git'
   }
   stage('Install node modules') {
-    sh 'npm install'
+    sh "npm install"
   }
   stage('test') {
     sh "npm run test-headless"
