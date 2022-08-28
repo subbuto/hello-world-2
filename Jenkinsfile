@@ -13,3 +13,5 @@ node {
   }
   stage('Copy') {
     sh "cp -a /var/lib/jenkins/angular pipeline/dist/hello-world-2/. /var/www/hello-world-2/html"
+  }
+}
